@@ -1,0 +1,69 @@
+//
+// buttons
+//
+.btn_a {
+  padding: 13px 44px 12px;
+  background-image: linear-gradient(-180deg, #3AAB47 0%, #30903B 100%);
+  border-radius: 3px;
+  color: $white;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &:hover {
+    background-image: linear-gradient(0deg, #3AAB47 15%, #30903B 93%);
+    box-shadow: 0 0 20px 0 rgba(63,208,76,0.54);
+    border-radius: 3px;
+    color: $white;
+  }
+  &:active {
+    background-color: $primary;
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, .7);
+
+  }
+
+  &:disabled {
+    background: #BCBCBC;
+    box-shadow: none;
+  }
+}
+
+.btn_b {
+  color: $white;
+  background-color: $primary;
+  border: 0;
+  font-family: $font-family-sans-serif;
+  z-index: 1;
+
+  &:hover {
+    color: $white;
+    background: $secondary;
+  }
+  &:active {
+    background-color: $primary;
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, .7);
+  }
+  &:disabled {
+    background: #BCBCBC;
+  }
+}
+
+.btn_c {
+  border: 1px solid rgba($primary, 0.40);
+  border-radius: 3px;
+  color: $primary;
+  text-align: center;
+  padding: 3px 8px;
+
+  &:hover {
+    color: $secondary;
+    border: 1px solid rgba($secondary, 0.40);
+  }
+}
+
+.btn-sm {
+  font-size: rem(16px);
+}

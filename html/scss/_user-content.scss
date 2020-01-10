@@ -1,0 +1,55 @@
+//
+// контент из админки (редактор)
+//
+.user-content {
+  //font-size: 19px;
+
+
+  img {
+    max-width: 100%;
+  }
+
+  p {
+    margin-bottom: 30px;
+
+    & ~ h2, & ~ h3 {
+      margin-top: 40px;
+    }
+  }
+
+  //ul, ol {
+  //  li:not(:last-child) {
+  //    margin-bottom: 15px;
+  //  }
+  //}
+  //
+  //ul {
+  //  list-style-type: none;
+  //}
+
+
+  ul {
+    padding-left: 1rem;
+
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+
+  blockquote {
+    border-left: 6px solid #D3F3D5;
+    padding-left: 35px;
+    @extend .mb-4, .mb-md-5;
+    font-weight: lighter;
+    color: #256A2D;
+    line-height: rem(28px);
+  }
+
+  figure {
+    //@extend .embed-responsive, .embed-responsive-16by9;
+
+    iframe {
+      @extend .embed-responsive-item;
+    }
+  }
+}

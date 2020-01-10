@@ -1,0 +1,194 @@
+#calculator {
+  z-index: 2;
+}
+.calculator-wrap {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 200px !important;
+  }
+}
+.calculator {
+  background: $white;
+  box-shadow: 0 16px 30px 0 rgba(104,146,111,0.31);
+  border-radius: 3px;
+  margin-top: -110px;
+  padding-top: 40px;
+
+  h2 {
+    margin-bottom: 40px;
+
+    @extend .mx-3, .mx-md-4;
+  }
+
+  .user-input {
+    max-width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    font-size: 20px;
+    -webkit-appearance: textfield;
+  }
+
+  &__row {
+    margin-bottom: 40px;
+    @extend .mx-3, .mx-md-4;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      font-size: 24px;
+      font-weight: bold;
+      color: #293133;
+
+      &.small {
+        font-size: $small-font-size;
+        font-weight: normal;
+      }
+    }
+  }
+
+  select, input[type=text], input[type=number] {
+    @extend .user-input;
+  }
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  select {
+    padding-right: 35px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10px' height='10px' viewBox='0 0 10 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='ОГПО' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='ОСНС-desktop' transform='translate(-307.000000, -2097.000000)' fill='%23747474'%3E%3Cpolygon id='Triangle-Copy-3' points='307 2097 317 2097 312 2107'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-color: transparent;
+    background-position-y: center;
+    background-position-x: 98%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  &__number {
+    width: 180px;
+    height: 50px;
+    text-align: center;
+  }
+  &__fund {
+    width: 260px;
+
+    & + span {
+      margin-left: -35px;
+      font-size: 20px;
+      color: #778E93;
+    }
+  }
+
+  &__control {
+    background: #F9F5EE;
+    width: 49px;
+    height: 48px;
+    border: 0;
+
+    &_minus {
+      position: absolute;
+      top: 1px;
+      left: 1px;
+    }
+    &_plus {
+      position: absolute;
+      top: 1px;
+      right: 1px;
+    }
+  }
+
+  &__accidents {
+    background: #E2F7E6;
+    border-radius: 3px;
+    padding: 15px;
+
+    input[type=checkbox] {
+      position: relative;
+      top: -2px;
+    }
+
+    label {
+      margin-bottom: 0;
+      font-size: $small-font-size;
+      font-weight: normal;
+    }
+  }
+
+  &__result {
+    background: #F9F5EE;
+    @extend .px-3, .px-md-4;
+    @extend .py-3;
+  }
+
+  &__insurance-price {
+    margin-top: 20px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #293133;
+  }
+
+  .multiselect {
+
+    &__tags {
+      border: 1px solid #CCC;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 13px;
+    }
+
+    &__input, &__single, &__placeholder {
+      margin-bottom: 0;
+      padding: 0;
+      font-size: 20px;
+    }
+
+    &__input {
+      border: none !important;
+      padding: 0 !important;
+      line-height: 1.2 !important;
+    }
+
+    &__option {
+      white-space: normal;
+      line-height: $line-height-base;
+    }
+
+    &__select {
+      height: 100%;
+      top: 0;
+
+      &:before {
+        top: 60%;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__sex-btn {
+    background: $white;
+    border: 1px solid #E8E8E8;
+    padding: 10px 20px;
+    outline: none !important;
+
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+      border-right: 0;
+    }
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+
+    &.active {
+      background-color: #C6F5CD;
+      box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, .7);
+      cursor: default;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+//
+// Стили подвала
+//
+.footer {
+  font-size: rem(16px);
+
+  small, .small {
+    font-size: rem(14px);
+  }
+
+  &__grafica {
+
+    @include media-breakpoint-down(sm) {
+      display: inline-block;
+      width: 270px;
+    }
+  }
+//  @extend .text_alt;
+//  color: $white;
+//  line-height: 20px;
+//  padding-bottom: 40px;
+//
+//  a {
+//    @include link-color($white, $black);
+//  }
+//}
+//
+//.footer {
+//
+//  &__pages {
+//
+//    li {
+//
+//      &:not(:last-child) {
+//        margin-bottom: 10px;
+//      }
+//    }
+//  }
+//
+//  &__grafica {
+//    position: relative;
+//    padding-top: 40px;
+//    margin-top: 25px;
+//
+//    img {
+//      position: absolute;
+//      top: 0;
+//      left: 0;
+//    }
+//
+//    @include media-breakpoint-down(sm) {
+//      padding-top: 0;
+//      padding-left: 130px;
+//    }
+//  }
+//}
+//
+//.footer__menu .list-inline-item:not(:last-child) {
+//  margin-right: 20px;
+//  margin-bottom: 5px;
+//}
+//
+//.subscribe {
+//
+//  p {
+//    margin-bottom: .3rem;
+//  }
+//
+//  .list-inline-item {
+//
+//    &:not(:last-child) {
+//      margin-right: .2rem;
+//    }
+//  }
+//
+//  &__url {
+//    display: inline-block;
+//    width: 33px;
+//    height: 33px;
+//
+//    border: 0;
+//
+//    &:hover {
+//
+//      svg {
+//
+//        rect {
+//          opacity: .2;
+//        }
+//
+//        path {
+//          fill: #FFF !important;
+//        }
+//      }
+//    }
+//  }
+}

@@ -1,0 +1,61 @@
+//
+// Главное меню
+//
+.nav-container {
+  background: #F2F2F2;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.main-nav {
+
+  &__items {
+    @extend .row, .list-unstyled;
+
+    margin-bottom: 0;
+  }
+
+  &__item {
+    @extend .col-12, .col-md;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 30px;
+      font-size: rem(24px);
+      text-align: center;
+    }
+
+    &_active {
+      a {
+        color: #9B9B9B;
+      }
+    }
+  }
+
+  &__link {
+    @extend .h-100;
+    display: block;
+    border-bottom: none;
+    @include media-breakpoint-up(md) {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__item_light {
+    display: none;
+
+    @include media-breakpoint-down(sm) {
+      display: inline-block;
+    }
+  }
+
+  &__item_light &__title {
+    font-weight: normal;
+  }
+}

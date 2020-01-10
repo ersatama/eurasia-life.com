@@ -1,0 +1,7 @@
+User-agent: *
+Disallow:
+Sitemap: https://eurasia-life.com/sitemap.xml
+
+User-agent: Yandex
+Disallow:
+Host: https://eurasia-life.com

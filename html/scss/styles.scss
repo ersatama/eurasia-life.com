@@ -1,0 +1,33 @@
+@charset "utf-8";
+// ядро - не удалять! init
+@import "_fonts";           // объявляем шрифты
+@import "_variables";       // переменные в том числе переменные bootstrap'а
+@import "_helpers";         // помогайки
+// ядро - не удалять!
+@import "_bootstrap";       // bootstrap (весь или нужные файлы)
+@import "_common";          // базовые вещи, общее (на всех страницах)
+
+// компоненты
+@import "_h";               // h1-h6
+@import "_buttons";         // кнопки
+//@import "_icons";           // иконки
+@import "_breadcrumb";      // хлебные крошки
+@import "_user-content";    // редактор в админке
+//@import "_relap";             // https://relap.io
+
+// layout
+@import "_layout-header";     // шапка
+@import "_main-menu";         // главное меню
+@import "_page-content";      // обвертка основного контента страницы
+@import "_layout-footer";     // подвал
+
+// страницы - не удалять!
+@import "_main-page";       // главная страница
+@import "_news";            // страница новости
+//@import "_content-page";    // контент-страница
+@import "_error-page";      // страница ошибок
+//@import "_error500";        // страница ошибки 500
+// страницы модулей
+@import "_landing-page";  // посадочная
+@import "_calculator";
+@import "_modal";

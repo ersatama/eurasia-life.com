@@ -1,0 +1,112 @@
+//
+// Главная страница
+//
+.main-page {
+
+  &__about {
+    background: transparent url("../i/bg-logo.svg") no-repeat center 20px;
+
+    @include media-breakpoint-down(sm) {
+      background-size: 90%;
+    }
+  }
+}
+
+//
+.landing-page-list {
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 310px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    background: no-repeat bottom center / 100% auto;
+    border: 0;
+    text-align: center;
+    transition: all 500ms;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      @include stretch();
+      background-color: rgba($black, 0.35);
+    }
+
+    &:hover {
+      background-size: 110% auto;
+    }
+    @include media-breakpoint-down(sm) {
+      background-size: cover !important;
+      min-height: 200px;
+      height: 200px;
+
+      display: table;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+    color: $white;
+    font-size: rem(28px);
+    font-weight: bold;
+
+    @include media-breakpoint-down(md) {
+      top: 30%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      top: initial;
+
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+//
+.inter-rating {
+
+  &__col {
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__item {
+    border-radius: 3px;
+    border: solid 1px #f9f5ee;
+    background-color: #f9f5ee;
+    font-size: rem(16px);
+    line-height: rem(22px);
+    @extend .h-100, .p-2, .p-md-4, .pt-3, .pt-md-5;
+
+    h3 {
+      position: relative;
+      top: 25px;
+      font-size: 48px;
+    }
+
+    figure {
+      width: 25%;
+      display: inline-block;
+
+      @include media-breakpoint-down(sm) {
+        width: 40%
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

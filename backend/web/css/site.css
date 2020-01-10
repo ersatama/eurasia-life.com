@@ -1,0 +1,165 @@
+/*/ Login page /*/
+
+.site-login h1 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background: #36404e;
+}
+
+.site-login .account-content {
+    background: #fff;
+}
+
+/*/ Login page /*/
+
+/*/ Side menu /*/
+
+.side-menu .help-box a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.side-menu .help-box a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+/*/ Side menu /*/
+
+.dd-handle.dd3-handle:before {
+    content: "\f047";
+}
+
+.custom-dd-empty.without-handler .dd-list .dd3-content {
+    padding-left: 16px;
+}
+
+#redactor-modal-body .checkbox input[type="checkbox"] {
+    opacity: 1;
+}
+
+/*/ redactorjs / CodeMirror / zenburn theme  /*/
+.cm-s-zenburn {
+    background-color: rgb(29, 29, 29);
+    color: rgb(204, 204, 204);
+    font-size: 15px;
+    line-height: 24px;
+    font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+    padding: 15px;
+}
+
+.cm-s-zenburn span.cm-tag.cm-error {
+    color: red;
+}
+
+.navbar-default .navbar-right li a.menu-item {
+    padding: 0 15px;
+    line-height: 68px;
+}
+
+.float-right {
+    float: right;
+}
+
+.fixed-form-btn-blk {
+    width: 200px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 10px;
+    z-index: 100;
+}
+
+.fixed-form-btn-blk .link-blk {
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+}
+
+.gallery-blk .sortable {
+    border: none;
+}
+
+.gallery-blk .sortable li {
+    width: 200px;
+    height: 165px;
+    background: #fff;
+    margin: 0px 10px 10px 0px;
+}
+
+.gallery-blk .sortable li.sortable-placeholder {
+    background: transparent;
+}
+
+.gallery-blk {
+    background: #f0f0f0;
+    margin: 0 -20px;
+    padding: 20px;
+}
+
+.form-gallery .sortable {
+    border: none;
+}
+
+.form-gallery .sortable .sortable-placeholder {
+    width: 250px;
+    min-height: 194px;
+}
+
+.form-gallery .sortable li {
+    width: 250px;
+}
+
+.form-gallery-blk {
+    background: #f0f0f0;
+    margin: -20px;
+    padding: 20px;
+}
+
+.form-gallery-blk .sortable > li {
+    background: #fff;
+}
+
+.picture-holder {
+    display: block;
+    position: relative;
+    padding-bottom: 62%;
+}
+
+.picture-holder img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.get-slug {
+    display: inline-block;
+    margin-top: 7px;
+    border-bottom: 1px dashed;
+}
+
+.upload-image__preview-blk {
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    border-radius: 3px;
+    max-width: 300px;
+}
+
+.upload-image__image {
+    max-width: 100%;
+}
+
+input.filestyle {
+    display: none;
+}
+
+#sidebar-menu .mdi-format-text::before {
+    font-size: 26px;
+    margin-left: -3px;
+}
+
+.search-text {
+    background: #FFCF6F;
+    border-radius: 3px;
+}

@@ -1,0 +1,26 @@
+$font-path: '../fonts/';
+
+@mixin font-face($filename, $family, $weight, $style) {
+  // from https://www.web-font-generator.com
+  @font-face {
+    font-display: swap;
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    src: local($family), url('#{$font-path}#{$filename}.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}#{$filename}.otf') format('opentype'),
+    url('#{$font-path}#{$filename}.woff') format('woff'),
+    url('#{$font-path}#{$filename}.ttf') format('truetype'),
+    url('#{$font-path}#{$filename}.svg##{$filename}') format('svg');
+  }
+}
+
+//@include font-face('ProximaNova-Light', ProximaNova, lighter, normal);
+@include font-face('PT-Root-UI_Bold', PTRootUIRegular, bold, normal);
+@include font-face('PT-Root-UI_Medium', PTRootUIRegular, 500, normal);
+@include font-face('PT-Root-UI_Regular', PTRootUIRegular, normal, normal);
+
+//@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i&subset=cyrillic');
+// use:
+//font-family: 'IBM Plex Sans', sans-serif;
+//font-family: 'PT Serif', serif;

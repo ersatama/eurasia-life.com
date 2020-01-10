@@ -1,0 +1,54 @@
+//
+// Стили шапки
+//
+
+// header
+.header {
+  margin-bottom: 45px;
+  font-size: rem(16px);
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 10px;
+  }
+  //.main-logo {
+  //  @include media-breakpoint-down(sm) {
+  //    max-width: 90%;
+  //  }
+  //}
+
+  &__phone {
+    font-size: rem(24px);
+    font-weight: bold;
+    color: #293133;
+    text-align: center;
+    border: 0;
+  }
+
+  .lang-nav {
+    text-transform: uppercase;
+    font-size: rem(16px);
+    line-height: rem(24px);
+
+    li {
+      border: 1px solid transparent;
+      padding: 3px 5px;
+      margin-right: 0 !important;
+    }
+
+    .active {
+      border: 1px solid rgba(119,142,147,0.40);
+      border-radius: 3px;
+    }
+  }
+}
+
+#site-logo {
+  height: 59px;
+  width: auto;
+
+  @include media-breakpoint-down(sm) {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+  }
+}

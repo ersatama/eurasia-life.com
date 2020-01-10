@@ -1,0 +1,93 @@
+//
+// mixins
+//
+//
+@import "~sass-rem";
+
+//
+@mixin link-color($color, $hover-color: $secondary, $border: true, $flink: false) {
+  color: $color;
+
+  @if ($border == true) {
+    border-color: rgba($color, .3);
+  } @else {
+    border: 0;
+  }
+
+  @if ($flink == true) {
+    border-bottom-style: dashed;
+  }
+
+  &:hover {
+    color: $hover-color;
+
+    @if ($border == true) {
+      border-color: rgba($hover-color, .3);
+    } @else {
+      border: 0;
+    }
+
+    svg:not(.no-svg-hover) {
+
+      path:not(.no-svg-hover) {
+        fill: $hover-color;
+      }
+
+      circle {
+        stroke: $hover-color;
+      }
+    }
+  }
+}
+
+@mixin stretch($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: absolute;
+  left: $left;
+  right: $right;
+  top: $top;
+  bottom: $bottom;
+}
+
+@mixin stretch-x($left: 0, $right: 0) {
+  position: absolute;
+  left: $left;
+  right: $right;
+}
+
+@mixin stretch-y($top: 0, $bottom: 0) {
+  position: absolute;
+  top: $top;
+  bottom: $bottom;
+}
+
+//
+// functions
+//
+
+// todo: починить!
+////
+//@function base64($string) {
+//  // from /gulpfile.js
+//  @return encodeBase64($string);
+//}
+//
+////
+//@function data-image($string, $type: 'image/svg+xml') {
+//  @return 'data:#{$type};base64,#{base64($string)}';
+//}
+
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}

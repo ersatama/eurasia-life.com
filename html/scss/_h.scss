@@ -1,0 +1,28 @@
+//
+// Заголовки (h1-h6)
+//
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-family-sans-serif;
+}
+
+h1 {
+  font-size: rem($h1-font-size);
+
+  @include media-breakpoint-down(sm) {
+    font-size: rem($h1-xs-font-size);
+  }
+}
+
+h2 {
+
+  @include media-breakpoint-down(sm) {
+    font-size: rem(32px);
+  }
+}
+h3 {
+
+  @include media-breakpoint-down(sm) {
+    font-size: rem(28px);
+  }
+}

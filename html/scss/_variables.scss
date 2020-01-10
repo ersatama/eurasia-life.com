@@ -1,0 +1,39 @@
+//
+// Переменные
+//
+// 1. Объявляем свои переменные, следить чтоб не пересеклись с переменными бутстрапа, @see ~/bootstrap/scss/_variables.scss
+//
+// 2. Назначаем переменные бутстрапа, @see ~/bootstrap/scss/_variables.scss
+// Чтоб свое не велосепидировать, посмотреть что можно поднастроить у бутстрапа!!!
+//  example:
+//  $font-family-sans-serif: ProximaNova;
+//  $font-size-base: 18px;
+//  $h1-font-size: 36px;
+//
+
+// базовый размер шрифта, ставить в html, дальше все по rem
+// @see ~/node_modules/sass-rem/_rem.scss
+$rem-baseline: 20px;
+
+$primary: #3aab47;
+$secondary: #C32727;
+
+$link-color: $primary;
+$link-hover-color: $secondary;
+$link-hover-decoration: none;
+
+$font-family-sans-serif: PTRootUIRegular, Georgia, sans-serif;
+$font-family-base: PTRootUIRegular, Tahoma, serif;
+
+$font-size-base: 1rem;
+$line-height-base: 1.2;
+$small-font-size: .85rem;
+$smaller-font-size: 14px;
+
+$h1-font-size: 64px;
+$h1-xs-font-size: 40px;
+
+$headings-font-weight: bold;
+
+$h2-font-size: 32px;
+$h2-xs-font-size: 24px;
